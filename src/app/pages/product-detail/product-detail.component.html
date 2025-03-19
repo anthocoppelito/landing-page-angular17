@@ -1,1 +1,21 @@
-<p>product-detail works!</p>
+<div class="container">
+    @if (loading){
+        <h3>Cargando informacion...</h3>
+    }
+    @if (!loading) {
+        <div class="card" style="width: 18rem;">
+            <img src="{{product?.image}}" class="card-img-top" alt="imagen del producto {{product?.id}}">
+            <div class="card-body">
+                <h5 class="card-title">{{product?.title}}</h5>
+                <p class="card-text">{{product?.description}}</p>
+                <p class="card-text">{{product?.price | currency}}</p>
+                
+    
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    
+    }
+
+</div>
+
